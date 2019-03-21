@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B912D0B21736E6864F63B885E1A7130"
+               BlueprintIdentifier = "6F73728C32CE0ED81F24E16374B09834"
                BlueprintName = "Pods-sildeImageView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-sildeImageView.a">

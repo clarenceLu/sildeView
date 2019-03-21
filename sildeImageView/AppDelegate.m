@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SildeViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    SildeViewController *sildeView = [[SildeViewController alloc] init];
+    self.window.rootViewController = sildeView;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

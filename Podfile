@@ -7,4 +7,9 @@ target 'sildeImageView' do
 
   # Pods for sildeImageView
   pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'ReactiveObjC'
+  pod 'SDWebImage'
+  pod 'MJExtension'
+
 end
