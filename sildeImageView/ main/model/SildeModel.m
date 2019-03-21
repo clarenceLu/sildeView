@@ -14,7 +14,7 @@
 -(instancetype)init
 {
     if (self = [super init]) {
-        self.sildeArray = [[NSMutableArray alloc] initWithCapacity:50];
+           self.sildeArray = [[NSMutableArray alloc] initWithCapacity:50];
     }
     return self;
 }

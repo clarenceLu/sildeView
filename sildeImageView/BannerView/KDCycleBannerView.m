@@ -9,6 +9,11 @@
 #import "KDCycleBannerView.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <AVFoundation/AVFoundation.h>
+
+#define videoTYPE 1
+#define imageTYPE 2
+
 
 @interface KDCycleBannerView () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
@@ -105,6 +110,27 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
     [self addSubview:_pageControl];
 }
 
+
+-(int)checkImageOrVideo:(NSString*)sourceUrl{
+    
+    if([sourceUrl containsString:@"mp4"]){
+        return videoTYPE;
+        
+    }else if([sourceUrl containsString:@"jpg"]){
+        return imageTYPE;
+        
+    }
+    return 0;
+}
+
+
+- (void)runLoopTheMovie:(NSNotification *)notification {
+    AVPlayer *player = notification.object;
+    [player.currentItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
+          [player play];
+    }];
+}
+
 - (void)loadData {
     NSAssert(_datasource != nil, @"datasource must not nil");
     _datasourceImages = [_datasource numberOfKDCycleBannerView:self];
@@ -138,32 +164,62 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
     
     for (NSInteger i = 0; i < _datasourceImages.count; i++) {
         CGRect imgRect = CGRectMake(contentWidth * i, 0, contentWidth, contentHeight);
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:imgRect];
-        imageView.backgroundColor = [UIColor clearColor];
-        imageView.contentMode = [_datasource contentModeForImageIndex:i];
         
         id imageSource = [_datasourceImages objectAtIndex:i];
-        if ([imageSource isKindOfClass:[UIImage class]]) {
-            imageView.image = imageSource;
-        }else if ([imageSource isKindOfClass:[NSString class]] || [imageSource isKindOfClass:[NSURL class]]) {
-            UIActivityIndicatorView *activityIndicatorView = [UIActivityIndicatorView new];
-            activityIndicatorView.center = CGPointMake(CGRectGetWidth(_scrollView.frame) * 0.5, CGRectGetHeight(_scrollView.frame) * 0.5);
-            activityIndicatorView.tag = 100;
-            activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-            [activityIndicatorView startAnimating];
-            [imageView addSubview:activityIndicatorView];
-            [imageView addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:kContentImageViewObservationContext];
+        
+        UIImageView *imageView =[[UIImageView alloc] initWithFrame:imgRect];
+        AVPlayer *_player;
+        AVPlayerLayer *playerLayer;
+        if([self checkImageOrVideo:imageSource]==imageTYPE){
+            [imageView setContentMode:UIViewContentModeScaleToFill];
+    
+            imageView.backgroundColor = [UIColor clearColor];
+            imageView.contentMode = [_datasource contentModeForImageIndex:i];
+             [_scrollView addSubview:imageView];
             
-            if ([self.datasource respondsToSelector:@selector(placeHolderImageOfBannerView:atIndex:)]) {
-                UIImage *placeHolderImage = [self.datasource placeHolderImageOfBannerView:self atIndex:i];
-                NSAssert(placeHolderImage != nil, @"placeHolderImage must not be nil");
-                [imageView sd_setImageWithURL:[imageSource isKindOfClass:[NSString class]] ? [NSURL URLWithString:imageSource] : imageSource placeholderImage:placeHolderImage];
-            }else {
-                [imageView sd_setImageWithURL:[imageSource isKindOfClass:[NSString class]] ? [NSURL URLWithString:imageSource] : imageSource];
+            if ([imageSource isKindOfClass:[UIImage class]]) {
+                imageView.image = imageSource;
+            }else if ([imageSource isKindOfClass:[NSString class]] || [imageSource isKindOfClass:[NSURL class]]) {
+                UIActivityIndicatorView *activityIndicatorView = [UIActivityIndicatorView new];
+                activityIndicatorView.center = CGPointMake(CGRectGetWidth(_scrollView.frame) * 0.5, CGRectGetHeight(_scrollView.frame) * 0.5);
+                activityIndicatorView.tag = 100;
+                activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+                [activityIndicatorView startAnimating];
+                [imageView addSubview:activityIndicatorView];
+                [imageView addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:kContentImageViewObservationContext];
+                
+                if ([self.datasource respondsToSelector:@selector(placeHolderImageOfBannerView:atIndex:)]) {
+                    UIImage *placeHolderImage = [self.datasource placeHolderImageOfBannerView:self atIndex:i];
+                    NSAssert(placeHolderImage != nil, @"placeHolderImage must not be nil");
+                    [imageView sd_setImageWithURL:[imageSource isKindOfClass:[NSString class]] ? [NSURL URLWithString:imageSource] : imageSource placeholderImage:placeHolderImage];
+                }else {
+                    [imageView sd_setImageWithURL:[imageSource isKindOfClass:[NSString class]] ? [NSURL URLWithString:imageSource] : imageSource];
+                }
+                
             }
             
+        }else if([self checkImageOrVideo:imageSource]==videoTYPE){
+            
+            NSURL *url = [[NSURL alloc] initWithString:imageSource];
+            _player=[AVPlayer playerWithURL:url];
+            playerLayer=[AVPlayerLayer playerLayerWithPlayer:_player];
+            playerLayer.frame = imgRect;
+            playerLayer.videoGravity =AVLayerVideoGravityResizeAspect;
+            [_scrollView.layer addSublayer:playerLayer];
+            
+            [_player play];
+            [_player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time){
+                float current = CMTimeGetSeconds(time);
+                NSLog(@"%@",playerLayer);
+                float total=CMTimeGetSeconds([_player.currentItem duration]);
+                if(current>total-0.01){
+                    [_player.currentItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
+                        [_player play];
+                    }];
+                }
+            }];
+            
         }
-        [_scrollView addSubview:imageView];
     }
     
     if (self.isContinuous && _datasourceImages.count > 1) {

@@ -13,6 +13,7 @@
 @property (nonatomic,strong)KDCycleBannerView *BannerTopView;
 @property (nonatomic,strong)KDCycleBannerView *BannerbottomView;
 
+
 @end
 
 
@@ -21,6 +22,8 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        self.imageArray = [[NSMutableArray alloc] initWithCapacity:50];
+        self.videoArray = [[NSMutableArray alloc] initWithCapacity:50];
         [self createUI];
     }
     return self;
@@ -29,11 +32,13 @@
 
 - (NSArray *)numberOfKDCycleBannerView:(KDCycleBannerView *)bannerView {
     
-    return @[[UIImage imageNamed:@"image1"],
-             [UIImage imageNamed:@"image1"],
-             [UIImage imageNamed:@"image1"],
-             [UIImage imageNamed:@"image1"],
-             [UIImage imageNamed:@"image1"]];
+    if(bannerView.tag==1000){
+        return self.videoArray;
+    }else if(bannerView.tag==1001){
+        return self.imageArray;
+    }
+    return nil;
+    
 }
 
 - (UIViewContentMode)contentModeForImageIndex:(NSUInteger)index {
@@ -47,26 +52,22 @@
 #pragma mark - KDCycleBannerViewDelegate
 
 
-
-
 - (void)cycleBannerView:(KDCycleBannerView *)bannerView didScrollOffSet:(float)offset{
-
- 
+    
     if(bannerView.tag==1000){
         [self.BannerbottomView setoffsetX:offset];
     }else if(bannerView.tag==1001){
          [self.BannerTopView setoffsetX:offset];
     }
     NSLog(@"didScrollToIndex:%ld", (long)index);
-    
 }
 
 
-
--(void)createUI{
-
+-(void)createBannerView{
+    
+    
     self.BannerTopView = [[KDCycleBannerView alloc] init];
-    self.BannerTopView.frame = CGRectMake(20, 270, 280, 150);
+    self.BannerTopView.frame = CGRectMake(0, 270, [UIScreen mainScreen].bounds.size.width, 200);
     self.BannerTopView.datasource = self;
     self.BannerTopView.delegate = self;
     self.BannerTopView.continuous = YES;
@@ -78,15 +79,20 @@
     
     
     self.BannerbottomView = [[KDCycleBannerView alloc] init];
-    self.BannerbottomView.frame = CGRectMake(20, 500, 280, 150);
+    self.BannerbottomView.frame = CGRectMake(0, 500, [UIScreen mainScreen].bounds.size.width, 200);
     self.BannerbottomView.datasource = self;
     self.BannerbottomView.delegate = self;
     self.BannerbottomView.continuous = YES;
     self.BannerbottomView.autoPlayTimeInterval = 0;
-     self.BannerbottomView.tag=1001;
+    self.BannerbottomView.tag=1001;
     [self addSubview:self.BannerbottomView];
-    
-    [self setBackgroundColor:[UIColor redColor]];
+
+}
+
+
+-(void)createUI{
+   
+    [self setBackgroundColor:[UIColor whiteColor]];
     
 }
 

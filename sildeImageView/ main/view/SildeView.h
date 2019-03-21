@@ -16,6 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)createUI;
 
+-(void)createBannerView;
+
+
+@property (nonatomic,strong)NSMutableArray *videoArray;
+@property (nonatomic,strong)NSMutableArray *imageArray;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

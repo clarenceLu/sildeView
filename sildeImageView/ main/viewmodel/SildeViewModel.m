@@ -7,6 +7,7 @@
 //
 
 #import "SildeViewModel.h"
+#import "SourceModel.h"
 
 @implementation SildeViewModel
 
@@ -17,6 +18,16 @@
         self.sildeModel = [[SildeModel alloc] init];
     }
     return self;
+}
+
+
+-(void)updateSlideData{
+    for (SourceModel *data in self.sildeModel.sildeArray){
+        [_sildeView.videoArray addObject:data.videoUrl];
+        [_sildeView.imageArray addObject:data.imageUrl];
+    }
+    
+    [_sildeView createBannerView];
 }
 
 

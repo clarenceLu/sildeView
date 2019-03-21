@@ -39,6 +39,8 @@
         if(success==true){
             NSLog(@"%@",result);
             NSLog(@"%@",self.sildeViewModel.sildeModel);
+            
+            [self.sildeViewModel updateSlideData];
         }
     }];
 }
