@@ -20,6 +20,8 @@
 		C4F759402243285800AC4CA7 /* SildeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7593F2243285800AC4CA7 /* SildeViewModel.m */; };
 		C4F7594522432DE800AC4CA7 /* NetWorkManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7594422432DE800AC4CA7 /* NetWorkManage.m */; };
 		C4F75948224334D900AC4CA7 /* SildeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F75947224334D900AC4CA7 /* SildeModel.m */; };
+		C4F7594D224360DC00AC4CA7 /* KDCycleBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7594B224360DC00AC4CA7 /* KDCycleBannerView.m */; };
+		C4F7594F224363E200AC4CA7 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F7594E224363E200AC4CA7 /* image1.png */; };
 		CF7C62AC06A6938CD1A8D1ED /* libPods-sildeImageView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4434AA09ED8EFA68FB72730 /* libPods-sildeImageView.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,9 @@
 		C4F75946224334D900AC4CA7 /* SildeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SildeModel.h; sourceTree = "<group>"; };
 		C4F75947224334D900AC4CA7 /* SildeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SildeModel.m; sourceTree = "<group>"; };
 		C4F759492243360A00AC4CA7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C4F7594B224360DC00AC4CA7 /* KDCycleBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDCycleBannerView.m; sourceTree = "<group>"; };
+		C4F7594C224360DC00AC4CA7 /* KDCycleBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDCycleBannerView.h; sourceTree = "<group>"; };
+		C4F7594E224363E200AC4CA7 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		E4434AA09ED8EFA68FB72730 /* libPods-sildeImageView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sildeImageView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF689D520B62D36D2235F9F6 /* Pods-sildeImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sildeImageView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sildeImageView/Pods-sildeImageView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +109,8 @@
 		C4F759152243214B00AC4CA7 /* sildeImageView */ = {
 			isa = PBXGroup;
 			children = (
+				C4F7594E224363E200AC4CA7 /* image1.png */,
+				C4F7594A224360DC00AC4CA7 /* BannerView */,
 				C4F7594222432D7900AC4CA7 /* Network */,
 				C4F7592C2243278200AC4CA7 /*  main */,
 				C4F759162243214B00AC4CA7 /* AppDelegate.h */,
@@ -188,6 +195,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		C4F7594A224360DC00AC4CA7 /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				C4F7594B224360DC00AC4CA7 /* KDCycleBannerView.m */,
+				C4F7594C224360DC00AC4CA7 /* KDCycleBannerView.h */,
+			);
+			path = BannerView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F759232243214D00AC4CA7 /* LaunchScreen.storyboard in Resources */,
+				C4F7594F224363E200AC4CA7 /* image1.png in Resources */,
 				C4F759202243214D00AC4CA7 /* Assets.xcassets in Resources */,
 				C4F7591E2243214B00AC4CA7 /* Main.storyboard in Resources */,
 			);
@@ -284,6 +301,7 @@
 				C4F759402243285800AC4CA7 /* SildeViewModel.m in Sources */,
 				C4F759372243282800AC4CA7 /* SildeViewService.m in Sources */,
 				C4F75948224334D900AC4CA7 /* SildeModel.m in Sources */,
+				C4F7594D224360DC00AC4CA7 /* KDCycleBannerView.m in Sources */,
 				C4F75934224327F400AC4CA7 /* SildeViewController.m in Sources */,
 				C4F7591B2243214B00AC4CA7 /* ViewController.m in Sources */,
 				C4F759262243214D00AC4CA7 /* main.m in Sources */,
