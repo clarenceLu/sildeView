@@ -168,8 +168,7 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
         id imageSource = [_datasourceImages objectAtIndex:i];
         
         UIImageView *imageView =[[UIImageView alloc] initWithFrame:imgRect];
-        AVPlayer *_player;
-        AVPlayerLayer *playerLayer;
+     
         if([self checkImageOrVideo:imageSource]==imageTYPE){
             [imageView setContentMode:UIViewContentModeScaleToFill];
     
@@ -199,22 +198,21 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
             }
             
         }else if([self checkImageOrVideo:imageSource]==videoTYPE){
-            
+
             NSURL *url = [[NSURL alloc] initWithString:imageSource];
-            _player=[AVPlayer playerWithURL:url];
-            playerLayer=[AVPlayerLayer playerLayerWithPlayer:_player];
+            AVPlayer* player=[AVPlayer playerWithURL:url];
+            AVPlayerLayer* playerLayer=[AVPlayerLayer playerLayerWithPlayer:player];
             playerLayer.frame = imgRect;
-            playerLayer.videoGravity =AVLayerVideoGravityResizeAspect;
+            playerLayer.videoGravity =AVLayerVideoGravityResize;
             [_scrollView.layer addSublayer:playerLayer];
-            
-            [_player play];
-            [_player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time){
+            [player play];
+            __block AVPlayer *playerBlock = player;
+            [player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time){
                 float current = CMTimeGetSeconds(time);
-                NSLog(@"%@",playerLayer);
-                float total=CMTimeGetSeconds([_player.currentItem duration]);
+                float total=CMTimeGetSeconds([playerBlock.currentItem duration]);
                 if(current>total-0.01){
-                    [_player.currentItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
-                        [_player play];
+                    [playerBlock.currentItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
+                        [playerBlock play];
                     }];
                 }
             }];
