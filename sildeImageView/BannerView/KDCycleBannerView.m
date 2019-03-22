@@ -165,12 +165,17 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
     for (NSInteger i = 0; i < _datasourceImages.count; i++) {
         CGRect imgRect = CGRectMake(contentWidth * i, 0, contentWidth, contentHeight);
         
+        
+        
         id imageSource = [_datasourceImages objectAtIndex:i];
         
         UIImageView *imageView =[[UIImageView alloc] initWithFrame:imgRect];
      
         if([self checkImageOrVideo:imageSource]==imageTYPE){
-            [imageView setContentMode:UIViewContentModeScaleToFill];
+            
+            [imageView setFrame:CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, 40, 60)];
+            
+            [imageView setContentMode:UIViewContentModeScaleAspectFill];
     
             imageView.backgroundColor = [UIColor clearColor];
             imageView.contentMode = [_datasource contentModeForImageIndex:i];

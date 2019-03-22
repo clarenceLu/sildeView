@@ -13,15 +13,15 @@
 		C4F759202243214D00AC4CA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F7591F2243214D00AC4CA7 /* Assets.xcassets */; };
 		C4F759232243214D00AC4CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F759212243214D00AC4CA7 /* LaunchScreen.storyboard */; };
 		C4F759262243214D00AC4CA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759252243214D00AC4CA7 /* main.m */; };
-		C4F75934224327F400AC4CA7 /* SildeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F75933224327F400AC4CA7 /* SildeViewController.m */; };
-		C4F759372243282800AC4CA7 /* SildeViewService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759362243282800AC4CA7 /* SildeViewService.m */; };
-		C4F7593A2243283600AC4CA7 /* SourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759392243283600AC4CA7 /* SourceModel.m */; };
-		C4F7593D2243284700AC4CA7 /* SildeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7593C2243284700AC4CA7 /* SildeView.m */; };
-		C4F759402243285800AC4CA7 /* SildeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7593F2243285800AC4CA7 /* SildeViewModel.m */; };
-		C4F7594522432DE800AC4CA7 /* NetWorkManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7594422432DE800AC4CA7 /* NetWorkManage.m */; };
-		C4F75948224334D900AC4CA7 /* SildeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F75947224334D900AC4CA7 /* SildeModel.m */; };
 		C4F7594D224360DC00AC4CA7 /* KDCycleBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7594B224360DC00AC4CA7 /* KDCycleBannerView.m */; };
 		C4F7594F224363E200AC4CA7 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F7594E224363E200AC4CA7 /* image1.png */; };
+		C4F759632244D01B00AC4CA7 /* SildeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759542244D01B00AC4CA7 /* SildeViewModel.m */; };
+		C4F759642244D01B00AC4CA7 /* SildeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759572244D01B00AC4CA7 /* SildeViewController.m */; };
+		C4F759652244D01B00AC4CA7 /* SourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7595A2244D01B00AC4CA7 /* SourceModel.m */; };
+		C4F759662244D01B00AC4CA7 /* SildeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7595C2244D01B00AC4CA7 /* SildeModel.m */; };
+		C4F759672244D01B00AC4CA7 /* SildeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7595F2244D01B00AC4CA7 /* SildeView.m */; };
+		C4F759682244D01B00AC4CA7 /* SildeViewService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759622244D01B00AC4CA7 /* SildeViewService.m */; };
+		C4F7596B2244D05C00AC4CA7 /* NetworkManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759692244D05C00AC4CA7 /* NetworkManage.m */; };
 		CF7C62AC06A6938CD1A8D1ED /* libPods-sildeImageView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4434AA09ED8EFA68FB72730 /* libPods-sildeImageView.a */; };
 /* End PBXBuildFile section */
 
@@ -37,24 +37,24 @@
 		C4F759222243214D00AC4CA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4F759242243214D00AC4CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4F759252243214D00AC4CA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C4F75932224327F400AC4CA7 /* SildeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SildeViewController.h; sourceTree = "<group>"; };
-		C4F75933224327F400AC4CA7 /* SildeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SildeViewController.m; sourceTree = "<group>"; };
-		C4F759352243282800AC4CA7 /* SildeViewService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SildeViewService.h; sourceTree = "<group>"; };
-		C4F759362243282800AC4CA7 /* SildeViewService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SildeViewService.m; sourceTree = "<group>"; };
-		C4F759382243283600AC4CA7 /* SourceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceModel.h; sourceTree = "<group>"; };
-		C4F759392243283600AC4CA7 /* SourceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceModel.m; sourceTree = "<group>"; };
-		C4F7593B2243284700AC4CA7 /* SildeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SildeView.h; sourceTree = "<group>"; };
-		C4F7593C2243284700AC4CA7 /* SildeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SildeView.m; sourceTree = "<group>"; };
-		C4F7593E2243285800AC4CA7 /* SildeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SildeViewModel.h; sourceTree = "<group>"; };
-		C4F7593F2243285800AC4CA7 /* SildeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SildeViewModel.m; sourceTree = "<group>"; };
-		C4F7594322432DE800AC4CA7 /* NetWorkManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkManage.h; sourceTree = "<group>"; };
-		C4F7594422432DE800AC4CA7 /* NetWorkManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkManage.m; sourceTree = "<group>"; };
-		C4F75946224334D900AC4CA7 /* SildeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SildeModel.h; sourceTree = "<group>"; };
-		C4F75947224334D900AC4CA7 /* SildeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SildeModel.m; sourceTree = "<group>"; };
 		C4F759492243360A00AC4CA7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C4F7594B224360DC00AC4CA7 /* KDCycleBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDCycleBannerView.m; sourceTree = "<group>"; };
 		C4F7594C224360DC00AC4CA7 /* KDCycleBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDCycleBannerView.h; sourceTree = "<group>"; };
 		C4F7594E224363E200AC4CA7 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		C4F759532244D01B00AC4CA7 /* SildeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SildeViewModel.h; sourceTree = "<group>"; };
+		C4F759542244D01B00AC4CA7 /* SildeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SildeViewModel.m; sourceTree = "<group>"; };
+		C4F759562244D01B00AC4CA7 /* SildeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SildeViewController.h; sourceTree = "<group>"; };
+		C4F759572244D01B00AC4CA7 /* SildeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SildeViewController.m; sourceTree = "<group>"; };
+		C4F759592244D01B00AC4CA7 /* SildeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SildeModel.h; sourceTree = "<group>"; };
+		C4F7595A2244D01B00AC4CA7 /* SourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceModel.m; sourceTree = "<group>"; };
+		C4F7595B2244D01B00AC4CA7 /* SourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceModel.h; sourceTree = "<group>"; };
+		C4F7595C2244D01B00AC4CA7 /* SildeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SildeModel.m; sourceTree = "<group>"; };
+		C4F7595E2244D01B00AC4CA7 /* SildeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SildeView.h; sourceTree = "<group>"; };
+		C4F7595F2244D01B00AC4CA7 /* SildeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SildeView.m; sourceTree = "<group>"; };
+		C4F759612244D01B00AC4CA7 /* SildeViewService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SildeViewService.h; sourceTree = "<group>"; };
+		C4F759622244D01B00AC4CA7 /* SildeViewService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SildeViewService.m; sourceTree = "<group>"; };
+		C4F759692244D05C00AC4CA7 /* NetworkManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManage.m; sourceTree = "<group>"; };
+		C4F7596A2244D05C00AC4CA7 /* NetworkManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManage.h; sourceTree = "<group>"; };
 		E4434AA09ED8EFA68FB72730 /* libPods-sildeImageView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sildeImageView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF689D520B62D36D2235F9F6 /* Pods-sildeImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sildeImageView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sildeImageView/Pods-sildeImageView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,10 +109,10 @@
 		C4F759152243214B00AC4CA7 /* sildeImageView */ = {
 			isa = PBXGroup;
 			children = (
+				C4F759512244D01B00AC4CA7 /* Main */,
 				C4F7594E224363E200AC4CA7 /* image1.png */,
 				C4F7594A224360DC00AC4CA7 /* BannerView */,
 				C4F7594222432D7900AC4CA7 /* Network */,
-				C4F7592C2243278200AC4CA7 /*  main */,
 				C4F759162243214B00AC4CA7 /* AppDelegate.h */,
 				C4F759172243214B00AC4CA7 /* AppDelegate.m */,
 				C4F759192243214B00AC4CA7 /* ViewController.h */,
@@ -127,70 +127,11 @@
 			path = sildeImageView;
 			sourceTree = "<group>";
 		};
-		C4F7592C2243278200AC4CA7 /*  main */ = {
-			isa = PBXGroup;
-			children = (
-				C4F7592D2243278200AC4CA7 /* viewmodel */,
-				C4F7592E2243278200AC4CA7 /* controller */,
-				C4F7592F2243278200AC4CA7 /* model */,
-				C4F759302243278200AC4CA7 /* view */,
-				C4F759312243278200AC4CA7 /* service */,
-			);
-			path = " main";
-			sourceTree = "<group>";
-		};
-		C4F7592D2243278200AC4CA7 /* viewmodel */ = {
-			isa = PBXGroup;
-			children = (
-				C4F7593E2243285800AC4CA7 /* SildeViewModel.h */,
-				C4F7593F2243285800AC4CA7 /* SildeViewModel.m */,
-			);
-			path = viewmodel;
-			sourceTree = "<group>";
-		};
-		C4F7592E2243278200AC4CA7 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				C4F75932224327F400AC4CA7 /* SildeViewController.h */,
-				C4F75933224327F400AC4CA7 /* SildeViewController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		C4F7592F2243278200AC4CA7 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				C4F759382243283600AC4CA7 /* SourceModel.h */,
-				C4F759392243283600AC4CA7 /* SourceModel.m */,
-				C4F75946224334D900AC4CA7 /* SildeModel.h */,
-				C4F75947224334D900AC4CA7 /* SildeModel.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		C4F759302243278200AC4CA7 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				C4F7593B2243284700AC4CA7 /* SildeView.h */,
-				C4F7593C2243284700AC4CA7 /* SildeView.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		C4F759312243278200AC4CA7 /* service */ = {
-			isa = PBXGroup;
-			children = (
-				C4F759352243282800AC4CA7 /* SildeViewService.h */,
-				C4F759362243282800AC4CA7 /* SildeViewService.m */,
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
 		C4F7594222432D7900AC4CA7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C4F7594322432DE800AC4CA7 /* NetWorkManage.h */,
-				C4F7594422432DE800AC4CA7 /* NetWorkManage.m */,
+				C4F7596A2244D05C00AC4CA7 /* NetworkManage.h */,
+				C4F759692244D05C00AC4CA7 /* NetworkManage.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -202,6 +143,65 @@
 				C4F7594C224360DC00AC4CA7 /* KDCycleBannerView.h */,
 			);
 			path = BannerView;
+			sourceTree = "<group>";
+		};
+		C4F759512244D01B00AC4CA7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C4F759522244D01B00AC4CA7 /* ViewModel */,
+				C4F759552244D01B00AC4CA7 /* Controller */,
+				C4F759582244D01B00AC4CA7 /* Model */,
+				C4F7595D2244D01B00AC4CA7 /* View */,
+				C4F759602244D01B00AC4CA7 /* Service */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C4F759522244D01B00AC4CA7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4F759532244D01B00AC4CA7 /* SildeViewModel.h */,
+				C4F759542244D01B00AC4CA7 /* SildeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4F759552244D01B00AC4CA7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4F759562244D01B00AC4CA7 /* SildeViewController.h */,
+				C4F759572244D01B00AC4CA7 /* SildeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4F759582244D01B00AC4CA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4F759592244D01B00AC4CA7 /* SildeModel.h */,
+				C4F7595A2244D01B00AC4CA7 /* SourceModel.m */,
+				C4F7595B2244D01B00AC4CA7 /* SourceModel.h */,
+				C4F7595C2244D01B00AC4CA7 /* SildeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4F7595D2244D01B00AC4CA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4F7595E2244D01B00AC4CA7 /* SildeView.h */,
+				C4F7595F2244D01B00AC4CA7 /* SildeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4F759602244D01B00AC4CA7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C4F759612244D01B00AC4CA7 /* SildeViewService.h */,
+				C4F759622244D01B00AC4CA7 /* SildeViewService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,17 +297,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F7594522432DE800AC4CA7 /* NetWorkManage.m in Sources */,
-				C4F759402243285800AC4CA7 /* SildeViewModel.m in Sources */,
-				C4F759372243282800AC4CA7 /* SildeViewService.m in Sources */,
-				C4F75948224334D900AC4CA7 /* SildeModel.m in Sources */,
+				C4F759642244D01B00AC4CA7 /* SildeViewController.m in Sources */,
+				C4F759662244D01B00AC4CA7 /* SildeModel.m in Sources */,
+				C4F759652244D01B00AC4CA7 /* SourceModel.m in Sources */,
 				C4F7594D224360DC00AC4CA7 /* KDCycleBannerView.m in Sources */,
-				C4F75934224327F400AC4CA7 /* SildeViewController.m in Sources */,
+				C4F7596B2244D05C00AC4CA7 /* NetworkManage.m in Sources */,
 				C4F7591B2243214B00AC4CA7 /* ViewController.m in Sources */,
 				C4F759262243214D00AC4CA7 /* main.m in Sources */,
+				C4F759632244D01B00AC4CA7 /* SildeViewModel.m in Sources */,
+				C4F759672244D01B00AC4CA7 /* SildeView.m in Sources */,
+				C4F759682244D01B00AC4CA7 /* SildeViewService.m in Sources */,
 				C4F759182243214B00AC4CA7 /* AppDelegate.m in Sources */,
-				C4F7593A2243283600AC4CA7 /* SourceModel.m in Sources */,
-				C4F7593D2243284700AC4CA7 /* SildeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //  Copyright © 2019 clarence. All rights reserved.
 //
 
-#import "NetWorkManage.h"
+#import "NetworkManage.h"
 
 @implementation NetWorkManage
 
