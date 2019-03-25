@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C46752CC2248B54E0055D5EC /* HQFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C46752C62248B54E0055D5EC /* HQFlowView.m */; };
+		C46752CD2248B54E0055D5EC /* HQIndexBannerSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = C46752C72248B54E0055D5EC /* HQIndexBannerSubview.m */; };
+		C46752CE2248B54E0055D5EC /* HQImagePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C46752C82248B54E0055D5EC /* HQImagePageControl.m */; };
 		C4F759182243214B00AC4CA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F759172243214B00AC4CA7 /* AppDelegate.m */; };
 		C4F7591B2243214B00AC4CA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7591A2243214B00AC4CA7 /* ViewController.m */; };
 		C4F7591E2243214B00AC4CA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F7591C2243214B00AC4CA7 /* Main.storyboard */; };
@@ -27,6 +30,12 @@
 
 /* Begin PBXFileReference section */
 		6AE2C990B8F2341FB060878E /* Pods-sildeImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sildeImageView.release.xcconfig"; path = "Pods/Target Support Files/Pods-sildeImageView/Pods-sildeImageView.release.xcconfig"; sourceTree = "<group>"; };
+		C46752C62248B54E0055D5EC /* HQFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQFlowView.m; sourceTree = "<group>"; };
+		C46752C72248B54E0055D5EC /* HQIndexBannerSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQIndexBannerSubview.m; sourceTree = "<group>"; };
+		C46752C82248B54E0055D5EC /* HQImagePageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQImagePageControl.m; sourceTree = "<group>"; };
+		C46752C92248B54E0055D5EC /* HQFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQFlowView.h; sourceTree = "<group>"; };
+		C46752CA2248B54E0055D5EC /* HQImagePageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQImagePageControl.h; sourceTree = "<group>"; };
+		C46752CB2248B54E0055D5EC /* HQIndexBannerSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQIndexBannerSubview.h; sourceTree = "<group>"; };
 		C4F759132243214B00AC4CA7 /* sildeImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sildeImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F759162243214B00AC4CA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4F759172243214B00AC4CA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +97,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C46752C52248B54E0055D5EC /* HQFlowView */ = {
+			isa = PBXGroup;
+			children = (
+				C46752C62248B54E0055D5EC /* HQFlowView.m */,
+				C46752C72248B54E0055D5EC /* HQIndexBannerSubview.m */,
+				C46752C82248B54E0055D5EC /* HQImagePageControl.m */,
+				C46752C92248B54E0055D5EC /* HQFlowView.h */,
+				C46752CA2248B54E0055D5EC /* HQImagePageControl.h */,
+				C46752CB2248B54E0055D5EC /* HQIndexBannerSubview.h */,
+			);
+			path = HQFlowView;
+			sourceTree = "<group>";
+		};
 		C4F7590A2243214B00AC4CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +161,7 @@
 		C4F7594A224360DC00AC4CA7 /* BannerView */ = {
 			isa = PBXGroup;
 			children = (
+				C46752C52248B54E0055D5EC /* HQFlowView */,
 				C4F7594B224360DC00AC4CA7 /* KDCycleBannerView.m */,
 				C4F7594C224360DC00AC4CA7 /* KDCycleBannerView.h */,
 			);
@@ -298,9 +321,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F759642244D01B00AC4CA7 /* SildeViewController.m in Sources */,
+				C46752CE2248B54E0055D5EC /* HQImagePageControl.m in Sources */,
 				C4F759662244D01B00AC4CA7 /* SildeModel.m in Sources */,
 				C4F759652244D01B00AC4CA7 /* SourceModel.m in Sources */,
+				C46752CC2248B54E0055D5EC /* HQFlowView.m in Sources */,
 				C4F7594D224360DC00AC4CA7 /* KDCycleBannerView.m in Sources */,
+				C46752CD2248B54E0055D5EC /* HQIndexBannerSubview.m in Sources */,
 				C4F7596B2244D05C00AC4CA7 /* NetworkManage.m in Sources */,
 				C4F7591B2243214B00AC4CA7 /* ViewController.m in Sources */,
 				C4F759262243214D00AC4CA7 /* main.m in Sources */,

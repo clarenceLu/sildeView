@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sildeImageView/BannerView/KDCycleBannerView.m"
-            timestampString = "574935163.923569"
+            timestampString = "575195892.637682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -58,12 +58,12 @@
                   moduleName = "sildeImageView"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lujiawei/Documents/sildeImageView/sildeImageView/BannerView/KDCycleBannerView.m"
-                  timestampString = "574851071.985849"
+                  timestampString = "575195477.736092"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
                   endingLineNumber = "129"
-                  offsetFromSymbolStart = "78">
+                  offsetFromSymbolStart = "92">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "sildeImageView"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lujiawei/Documents/sildeImageView/sildeImageView/BannerView/KDCycleBannerView.m"
-                  timestampString = "574851071.988489"
+                  timestampString = "575195477.738102"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
                   endingLineNumber = "129"
-                  offsetFromSymbolStart = "15">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -88,12 +88,12 @@
                   moduleName = "sildeImageView"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lujiawei/Documents/sildeImageView/sildeImageView/BannerView/KDCycleBannerView.m"
-                  timestampString = "574851071.990821"
+                  timestampString = "575195477.740308"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
                   endingLineNumber = "129"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -105,7 +105,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sildeImageView/BannerView/KDCycleBannerView.m"
-            timestampString = "574935163.9236929"
+            timestampString = "575195892.6377521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -121,7 +121,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sildeImageView/BannerView/KDCycleBannerView.m"
-            timestampString = "574935163.9237961"
+            timestampString = "575195892.637803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -136,13 +136,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sildeImageView/BannerView/KDCycleBannerView.m"
-            timestampString = "574935163.9238991"
+            filePath = "sildeImageView/Main/View/SildeView.m"
+            timestampString = "575195892.637856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
-            landmarkName = "-loadData"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-cycleBannerView:didScrollOffSet:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sildeImageView/Main/View/SildeView.m"
+            timestampString = "575195892.6382411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-didScrollViewOffSet:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
